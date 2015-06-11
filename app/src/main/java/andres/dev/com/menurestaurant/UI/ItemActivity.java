@@ -1,5 +1,6 @@
 package andres.dev.com.menurestaurant.UI;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -63,8 +64,9 @@ public class ItemActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.items_action_car) {
+            Intent intent = new Intent(this,CarActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

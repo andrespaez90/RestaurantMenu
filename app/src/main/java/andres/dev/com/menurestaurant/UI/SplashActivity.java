@@ -139,17 +139,18 @@ public class SplashActivity extends Activity {
             JSONArray jArray = jObject.getJSONArray( JSONkeys.JSON_ITEMS.toString() );
             for(int i =0 ; i < jArray.length() ; i++ ){
                 JSONObject jItem = jArray.getJSONObject(i);
-                a.addCategory( createItem( jItem ) );
+                a.addCategory( createItem( jItem, a ) );
             }
 
             return a;
         }
 
-        private Category createItem(JSONObject jObject) throws JSONException {
+        private Category createItem(JSONObject jObject,  Category parent) throws JSONException {
             Category a = new Category();
             a.setId(jObject.getInt(JSONkeys.JSON_ID.toString()));
             a.setName(jObject.getString(JSONkeys.JSON_NAME.toString()));
             a.setImagePath(jObject.getString(JSONkeys.JSON_IMAGE.toString()));
+            a.setParent(parent);
             a.setDescription( jObject.getString(JSONkeys.JSON_DESCRIPTION .toString()) );
             return a;
         }

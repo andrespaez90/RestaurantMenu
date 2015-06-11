@@ -29,6 +29,10 @@
             android:name=".UI.ItemActivity"
             android:label="@string/title_activity_item" >
         </activity>
+        <activity
+            android:name=".UI.CarActivity"
+            android:label="@string/title_activity_car" >
+        </activity>
     </application>
 
 </manifest>

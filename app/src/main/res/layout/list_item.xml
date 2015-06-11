@@ -6,14 +6,17 @@
     android:layout_marginLeft="8dp"
     android:layout_marginRight="8dp"
     android:layout_marginTop="12dp"
+    android:padding="10dp"
     android:background="@drawable/bg_words">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/item_img"
         android:layout_width="100dp"
-        android:scaleType="fitXY"
-        android:adjustViewBounds="true"
-        android:layout_height="100dp"/>
+        android:layout_height="100dp"
+        app:border_width="1dp"
+        app:border_color="#84373737" />
+
 
     <LinearLayout
         android:orientation="vertical"
@@ -29,7 +32,10 @@
             android:text="Large Text"
             android:id="@+id/item_title"
             android:layout_gravity="center_horizontal"
-            android:gravity="center" />
+            android:gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="5dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -39,7 +45,10 @@
             android:id="@+id/item_description"
             android:maxLines="4"
             android:lines="4"
-            android:layout_weight="0.79" />
+            android:layout_weight="0.79"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="5dp"/>
 
     </LinearLayout>
 

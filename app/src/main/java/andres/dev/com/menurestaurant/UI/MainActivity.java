@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.andexert.expandablelayout.library.ExpandableLayoutListView;
 
+import java.sql.Statement;
 import java.util.ArrayList;
 
 import andres.dev.com.menurestaurant.Adapter.ListCategoryAdapter;
@@ -71,7 +72,10 @@ public class MainActivity extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        if(id == R.id.main_action_car){
+            Intent intent = new Intent(this,CarActivity.class);
+            startActivity(intent);
+        }
 
         return super.onOptionsItemSelected(item);
     }

@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         expandable:el_headerLayout="@layout/list_e_header"
         expandable:el_contentLayout="@layout/list_e_content"
-        android:background="#e74c3c"
+        android:background="@color/CategoryWords"
 
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
