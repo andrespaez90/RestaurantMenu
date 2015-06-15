@@ -22,9 +22,7 @@ import andres.dev.com.menurestaurant.R;
 import andres.dev.com.menurestaurant.UI.ItemActivity;
 import andres.dev.com.menurestaurant.Utils.ActivityKeys;
 
-/**
- * Created by INNSO SAS on 11/06/2015.
- */
+
 public class ListSubCategoryAdaper extends BaseAdapter implements AdapterView.OnItemClickListener {
 
     private ArrayList<Category> allItems;

@@ -22,9 +22,6 @@ import java.util.ArrayList;
 import andres.dev.com.menurestaurant.Model.Category;
 import andres.dev.com.menurestaurant.R;
 
-/**
- * Created by INNSO SAS on 11/06/2015.
- */
 public class ListCategoryAdapter extends BaseAdapter {
 
         private ArrayList<Category> visibleItems;
