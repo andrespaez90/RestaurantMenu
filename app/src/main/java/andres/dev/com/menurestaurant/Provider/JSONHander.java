@@ -19,9 +19,6 @@ import java.io.InputStreamReader;
 
 import andres.dev.com.menurestaurant.MenuApplication;
 
-/**
- * Created by INNSO SAS on 10/06/2015.
- */
 public class JSONHander {
 
     public static String readJSON(String url){

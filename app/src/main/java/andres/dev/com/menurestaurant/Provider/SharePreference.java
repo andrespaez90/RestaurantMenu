@@ -5,9 +5,7 @@ import android.content.SharedPreferences;
 import andres.dev.com.menurestaurant.MenuApplication;
 import andres.dev.com.menurestaurant.Utils.SharedPrefKey;
 
-/**
- * Created by INNSO SAS on 10/06/2015.
- */
+
 public class SharePreference {
 
     public static void saveDataApplication(SharedPrefKey preKey, String value){

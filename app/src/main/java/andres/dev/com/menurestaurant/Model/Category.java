@@ -2,9 +2,6 @@ package andres.dev.com.menurestaurant.Model;
 
 import java.util.ArrayList;
 
-/**
- * Created by INNSO SAS on 10/06/2015.
- */
 public class Category {
 
     private int id;

@@ -22,9 +22,7 @@ import andres.dev.com.menurestaurant.Utils.JSONkeys;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-/**
- * Created by INNSO SAS on 10/06/2015.
- */
+
 public class RecycleItemAdapter extends RecyclerView.Adapter<RecycleItemAdapter.DataViewHolder> {
 
 

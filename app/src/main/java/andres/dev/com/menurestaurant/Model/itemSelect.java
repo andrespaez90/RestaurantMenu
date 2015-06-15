@@ -1,8 +1,5 @@
 package andres.dev.com.menurestaurant.Model;
 
-/**
- * Created by INNSO SAS on 11/06/2015.
- */
 public class itemSelect {
 
     private Category Category;

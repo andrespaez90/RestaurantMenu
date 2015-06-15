@@ -2,9 +2,7 @@ package andres.dev.com.menurestaurant.Model;
 
 import java.util.ArrayList;
 
-/**
- * Created by INNSO SAS on 10/06/2015.
- */
+
 public class ModelFacade {
 
     public static ArrayList<Category> Categoties =  new ArrayList<Category>();

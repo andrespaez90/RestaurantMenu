@@ -18,9 +18,7 @@ import andres.dev.com.menurestaurant.Model.ModelFacade;
 import andres.dev.com.menurestaurant.Model.itemSelect;
 import andres.dev.com.menurestaurant.R;
 
-/**
- * Created by INNSO SAS on 10/06/2015.
- */
+
 public class RecycleCarAdapter extends RecyclerView.Adapter<RecycleCarAdapter.DataViewHolder> {
 
 
