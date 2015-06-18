@@ -16,6 +16,15 @@ public class Category {
         subCategory = new ArrayList<Category>();
     }
 
+    public Category ( int id, String name, String imagePath, String descripption){
+        this.id = id;
+        this.Name = name;
+        this.imagePath = imagePath;
+        this.Description = descripption;
+
+        subCategory = new ArrayList<Category>();
+    }
+
     public void addCategory(Category subcategory){
         subCategory.add(subcategory);
     }
