@@ -1,12 +1,15 @@
 package andres.dev.com.menurestaurant.Adapter;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,6 +19,7 @@ import java.util.ArrayList;
 
 import andres.dev.com.menurestaurant.Model.Category;
 import andres.dev.com.menurestaurant.Model.ModelFacade;
+import andres.dev.com.menurestaurant.Model.itemSelect;
 import andres.dev.com.menurestaurant.UI.MainActivity;
 import andres.dev.com.menurestaurant.R;
 import andres.dev.com.menurestaurant.Utils.JSONkeys;
@@ -103,8 +107,32 @@ public class RecycleItemAdapter extends RecyclerView.Adapter<RecycleItemAdapter.
 
         @Override
         public void onClick(View v) {
-            ModelFacade.addItemCar(Category);
-            Toast.makeText(mContext , "Item Agregado al Carito de Compras", Toast.LENGTH_LONG).show();
+
+            final Dialog d = new Dialog(mContext);
+            d.setTitle("Cuantos deseas Llevar?");
+            d.setContentView(R.layout.numberpicker_dialog);
+            Button accept = (Button) d.findViewById(R.id.numberPicker_ok);
+            Button cancel = (Button) d.findViewById(R.id.numberPicker_cancel);
+            final NumberPicker np = (NumberPicker) d.findViewById(R.id.numberPicker);
+            np.setMaxValue(20);
+            np.setMinValue(1);
+            np.setWrapSelectorWheel(false);
+            accept.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View v) {
+                    itemSelect newItem = new itemSelect(Category, np.getValue());
+                    ModelFacade.addItemCar(newItem);
+                    d.dismiss();
+                }
+            });
+            cancel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    d.dismiss();
+                }
+            });
+            d.show();
         }
     }
 }

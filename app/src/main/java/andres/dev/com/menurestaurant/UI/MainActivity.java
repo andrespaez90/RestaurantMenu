@@ -75,6 +75,7 @@ public class MainActivity extends ActionBarActivity {
         if(id == R.id.main_action_car){
             Intent intent = new Intent(this,CarActivity.class);
             startActivity(intent);
+            overridePendingTransition(R.anim.abc_slide_in_top, R.anim.abc_slide_out_bottom);
         }
 
         return super.onOptionsItemSelected(item);

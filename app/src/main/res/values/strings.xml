@@ -12,5 +12,7 @@
     <string name="title_activity_item">Nuestros Productos</string>
 
     <string name="title_activity_car">Carrito de Compras</string>
+    <string name="action_accept">Aceptar</string>
+    <string name="action_cancel">Cancel</string>
 
 </resources>

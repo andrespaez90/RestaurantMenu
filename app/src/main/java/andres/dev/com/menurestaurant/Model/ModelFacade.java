@@ -22,14 +22,14 @@ public class ModelFacade {
         return null;
     }
 
-    public static void addItemCar(Category c){
+    public static void addItemCar(itemSelect c){
         for( itemSelect item : ItemsCar){
-            if(item.getCategory().getId() == c.getId() &&
-                    item.getCategory().getParent().getId() == c.getParent().getId() ){
-                item.setnCount(item.getnCount()+1);
+            if(item.getCategory().getId() == c.getCategory().getId() &&
+                    item.getCategory().getParent().getId() == c.getCategory().getParent().getId() ){
+                item.setnCount(item.getnCount()+c.getnCount());
                 return;
             }
         }
-        ItemsCar.add(new itemSelect( c , 1));
+        ItemsCar.add(c);
     }
 }
