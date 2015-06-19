@@ -4,7 +4,9 @@
 
 
     <color name="CategoryWords">#5F3912</color>
+    <color name="strokeCategoryWords">#8e5f3912</color>
     <color name="colorPrimary">#F50057</color>
+    <color name="colorStrokePrimary">#56f50057</color>
     <color name="colorPrimaryDark">#C51162</color>
     <color name="textColorPrimary">#FFFFFF</color>
     <color name="windowBackground">#FFFFFF</color>

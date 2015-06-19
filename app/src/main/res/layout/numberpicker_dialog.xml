@@ -19,7 +19,9 @@
             android:layout_height="wrap_content"
             android:text="@string/action_cancel"
             android:id="@+id/numberPicker_cancel"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@drawable/ob_button"
+            android:textColor="@color/white"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -27,7 +29,9 @@
             android:text="@string/action_accept"
             android:id="@+id/numberPicker_ok"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@drawable/red_button"
+            android:textColor="@color/white"/>
 
     </LinearLayout>
 
