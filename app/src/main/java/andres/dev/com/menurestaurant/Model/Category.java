@@ -25,6 +25,13 @@ public class Category {
         subCategory = new ArrayList<Category>();
     }
 
+    public Category(int id, String name, Category parent) {
+        this.id = id;
+        this.Name = name;
+        this.Parent = parent;
+        subCategory = new ArrayList<Category>();
+    }
+
     public void addCategory(Category subcategory){
         subCategory.add(subcategory);
     }

@@ -11,9 +11,6 @@ import java.util.Vector;
 
 import andres.dev.com.menurestaurant.Model.Category;
 
-/**
- * Created by INNSO SAS on 18/06/2015.
- */
 public class PersistManager extends SQLiteOpenHelper {
 
     public PersistManager(Context context){
@@ -49,13 +46,26 @@ public class PersistManager extends SQLiteOpenHelper {
     }
 
 
-    public ArrayList< Category > getCategories(String Table){
+    public ArrayList< Category > getCategories(){
         ArrayList< Category > result = new ArrayList<Category>();
         SQLiteDatabase db = getReadableDatabase();
-        Cursor cursosr = db.rawQuery("SELECT * FROM " + Table, null);
+        Cursor cursosr = db.rawQuery("SELECT * FROM Category", null);
         Category data;
         while(cursosr.moveToNext()){
             data = new Category(cursosr.getInt(0),cursosr.getString(1),cursosr.getString(2),cursosr.getString(3));
+            result.add(data);
+        }
+        cursosr.close();
+        return result;
+    }
+
+    public ArrayList< Category > getSubCategory(Category categoryParent){
+        ArrayList< Category > result = new ArrayList<Category>();
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursosr = db.rawQuery("SELECT * FROM subCategory WHERE idParent = '"+categoryParent.getId()+"'", null);
+        Category data;
+        while(cursosr.moveToNext()){
+            data = new Category(cursosr.getInt(0),cursosr.getString(1), categoryParent);
             result.add(data);
         }
         cursosr.close();
